@@ -28,6 +28,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.Primary
 import org.springframework.orm.jpa.JpaTransactionManager
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean
+import org.springframework.orm.jpa.vendor.HibernateJpaDialect
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter
 import org.springframework.transaction.PlatformTransactionManager
 import org.springframework.transaction.annotation.EnableTransactionManagement
@@ -75,6 +76,7 @@ open class AxonConfiguration {
                                           AvailableSettings.HBM2DDL_AUTO to ddlAuto)
                 it.setPackagesToScan("org.axonframework")
                 it.afterPropertiesSet()
+                it.jpaDialect = HibernateJpaDialect()
             }.`object`
 
     @Bean

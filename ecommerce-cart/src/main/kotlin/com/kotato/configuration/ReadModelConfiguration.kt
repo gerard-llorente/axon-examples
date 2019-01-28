@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 import org.springframework.orm.jpa.JpaTransactionManager
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean
+import org.springframework.orm.jpa.vendor.HibernateJpaDialect
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter
 import org.springframework.transaction.PlatformTransactionManager
 import javax.inject.Named
@@ -58,6 +59,7 @@ open class ReadModelConfiguration {
                                           AvailableSettings.HBM2DDL_AUTO to ddlAuto)
                 it.setPackagesToScan("com.kotato.context")
                 it.afterPropertiesSet()
+                it.jpaDialect = HibernateJpaDialect()
             }.`object`
 
     @Bean(name = arrayOf("readModelPlatformTransactionManager"))

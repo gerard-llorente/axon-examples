@@ -18,7 +18,7 @@ write-model:
   datasource:
     url: jdbc:mysql://localhost:3306/ecommerce_write_model?useSSL=false
     username: root
-    password:
+    password: root
     name: "ecommerce-write-model"
     initial-size: 25
     max-active: 100
@@ -46,7 +46,7 @@ read-model:
   datasource:
     url: jdbc:mysql://localhost:3306/ecommerce_read_model?useSSL=false
     username: root
-    password:
+    password: root
     name: "ecommerce-read-model"
     initial-size: 25
     max-active: 100

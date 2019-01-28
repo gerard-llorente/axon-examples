@@ -26,3 +26,15 @@ hs_err_pid*
 
 #Exclude iml files
 *.iml
+
+#idea
+build/*
+.gradle/*
+.idea/*
+!.idea/runConfigurations
+!.idea/runConfigurations/*
+!.idea/vcs.xml
+!.idea/dictionaries
+!.idea/dictionaries/*
+out
+log/*
